@@ -1,0 +1,54 @@
+{
+  "config": {
+    "title": "React Dom Box2d",
+    "description": "Box2d physics engine and React DOM integrated ",
+    "menu": [],
+    "ordering": "descending",
+    "version": "0.1.0-alpha",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {
+      "codemirrorTheme": "dracula"
+    },
+    "htmlContext": {
+      "head": {
+        "links": [
+          {
+            "rel": "stylesheet",
+            "href": "https://codemirror.net/theme/dracula.css"
+          }
+        ]
+      }
+    }
+  },
+  "entries": {
+    "docs/Getting_Started.mdx": {
+      "name": "Getting Started",
+      "id": "b141c91d410c9fcbbbbea07ec4a6c43e",
+      "filepath": "docs/Getting_Started.mdx",
+      "link": null,
+      "slug": "docs-getting-started",
+      "route": "/docs-getting-started",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 2,
+          "slug": "try-it",
+          "value": "try it"
+        },
+        {
+          "depth": 2,
+          "slug": "introduction",
+          "value": "Introduction"
+        },
+        {
+          "depth": 2,
+          "slug": "getting-started",
+          "value": "Getting Started"
+        }
+      ]
+    }
+  }
+}

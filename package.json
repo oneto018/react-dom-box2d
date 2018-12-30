@@ -1,0 +1,45 @@
+{
+  "name": "react-dom-box2d",
+  "version": "0.1.0-alpha",
+  "description": "Box2d physics engine and React DOM integrated ",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "keywords": [
+    "box2d",
+    "physics",
+    "2dphysics",
+    "react",
+    "react-dom"
+  ],
+  "author": "Nagarajan N <oneto018@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.0",
+    "webpack": "^4.28.3",
+    "@flyover/box2d": "github:flyover/box2d.ts#99a83dd78fc7bd6d56893a3605e838dbe44c543e"
+  },
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "docz": "^0.13.7",
+    "docz-theme-bone": "^0.11.3",
+    "docz-theme-default": "^0.13.7",
+    "webpack-cli": "^3.1.2",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2"
+  }
+}
