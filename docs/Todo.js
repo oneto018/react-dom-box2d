@@ -13,7 +13,7 @@ const containerStyle = {
 	height:420,
 };
 
-const selectStyle = {
+const selectStyle = { 	 	
     height: 40,
     marginLeft: 30,
     verticalAlign: 'middle',
