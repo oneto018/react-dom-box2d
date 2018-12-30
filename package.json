@@ -41,5 +41,15 @@
     "webpack-cli": "^3.1.2",
     "react": "16.7.0-alpha.2",
     "react-dom": "16.7.0-alpha.2"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/oneto018/react-dom-box2d"
+  },
+  "homepage": "https://github.com/oneto018/react-dom-box2d",
+  "bugs":{ 
+    "url" : "https://github.com/oneto018/react-dom-box2d/issues",
+    "email" : "oneto018@gmail.com"
   }
+
 }
