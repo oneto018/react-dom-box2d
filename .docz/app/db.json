@@ -4,8 +4,8 @@
     "description": "Box2d physics engine and React DOM integrated ",
     "menu": [],
     "ordering": "descending",
-    "version": "0.1.0-alpha",
-    "repository": null,
+    "version": "0.1.0-alpha.2",
+    "repository": "https://github.com/oneto018/react-dom-box2d",
     "native": false,
     "codeSandbox": true,
     "themeConfig": {
@@ -25,19 +25,14 @@
   "entries": {
     "docs/Getting_Started.mdx": {
       "name": "Getting Started",
+      "route": "/docs/",
       "id": "b141c91d410c9fcbbbbea07ec4a6c43e",
       "filepath": "docs/Getting_Started.mdx",
-      "link": null,
+      "link": "https://github.com/oneto018/react-dom-box2d/edit/master/docs/Getting_Started.mdx",
       "slug": "docs-getting-started",
-      "route": "/docs-getting-started",
       "order": 0,
       "menu": null,
       "headings": [
-        {
-          "depth": 2,
-          "slug": "try-it",
-          "value": "try it"
-        },
         {
           "depth": 2,
           "slug": "introduction",
@@ -45,8 +40,77 @@
         },
         {
           "depth": 2,
+          "slug": "live-demos",
+          "value": "live demos"
+        },
+        {
+          "depth": 2,
           "slug": "getting-started",
           "value": "Getting Started"
+        },
+        {
+          "depth": 2,
+          "slug": "components",
+          "value": "Components"
+        },
+        {
+          "depth": 2,
+          "slug": "world-component",
+          "value": "world component"
+        }
+      ]
+    },
+    "docs/Item.mdx": {
+      "name": "Item",
+      "route": "/Item/",
+      "id": "db0f1280ecc0bb1137235ed7db37e329",
+      "filepath": "docs/Item.mdx",
+      "link": "https://github.com/oneto018/react-dom-box2d/edit/master/docs/Item.mdx",
+      "slug": "docs-item",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 2,
+          "slug": "import",
+          "value": "import"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "usage"
+        },
+        {
+          "depth": 2,
+          "slug": "reference",
+          "value": "reference"
+        }
+      ]
+    },
+    "docs/World.mdx": {
+      "name": "World",
+      "route": "/World/",
+      "id": "43f693a02a81b4bca48ab83316cc110a",
+      "filepath": "docs/World.mdx",
+      "link": "https://github.com/oneto018/react-dom-box2d/edit/master/docs/World.mdx",
+      "slug": "docs-world",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 2,
+          "slug": "import",
+          "value": "import"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "usage"
+        },
+        {
+          "depth": 2,
+          "slug": "reference",
+          "value": "reference"
         }
       ]
     }
