@@ -185,13 +185,35 @@ class Box2dWorld extends Component{
 
 
 Box2dWorld.propTypes = {
+	/** Width of your world in pixels */
 	width: PropTypes.number.isRequired,
+	/** height of your world in pixels */
 	height: PropTypes.number.isRequired,
+
+	/**
+		Gravity in the world in form of [x,y] array. By default the gravity is [0,10]. Meaning downward gravity of 10. For upward gravity it would be [0,-10]. Earth typically has gravity [0,9.8]
+	*/
 	gravity: TWO_NUMBERS_OPTIONAL,
+
+	/**
+		Whether to create an invisible walls enclosing our world. default is true. Without the enclosing, your objects will drift endlessly unless its been removed. This is mainly a convenience to prevent that. This is kind of like training wheel. Once you feel ready, disable this.
+	*/
 	enclosed: PropTypes.bool,
+
+	/**
+		Thickness of the walls created if enclosed=true in pixels. By default this is 3px
+	*/
+	enclosureThickness: PropTypes.number,
+
+	/**
+		You probably don't need to change this. Tells whether the objects in the physics world allowed tp sleep  or not. By default, its true.
+	*/
 	allowSleep: PropTypes.bool,
+	/**
+		Internal scaling factor used to translate the physical dimensions for simulation to the screen. Changing this value will have no effect of the size of the rendered objects. Its just used internally for the physical simulation. Mostly this parameter need not be edited. By default its 60
+	*/
 	scaleFactor: PropTypes.number,
-	enclosureThickness: PropTypes.number
+	
 };
 
 export {Consumer};

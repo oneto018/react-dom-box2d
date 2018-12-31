@@ -182,21 +182,63 @@ class Box2dObject extends Component{
 
 }
 
+Box2dObject.defaultProps = {
+	fixed: false,
+	density:1,
+	shape:'box',
+	bullet:false,
+
+};
+
 Box2dObject.propTypes = {
+	/** This component has to have a single dom element child */
 	children: PropTypes.element.isRequired,
+	/** Height of the object. If not specified it will try to determine automatically (Auto detection is iffy due to the complexity of css rendering) */
 	height: PropTypes.number,
+	/** Width of the object. If not specified it will try to determine automatically (Auto detection is iffy due to the complexity of css rendering) */
 	width: PropTypes.number,
+
+	/** Left of the object. If not specified it will try to determine automatically (Auto detection is iffy due to the complexity of css rendering) */
 	left: PropTypes.number,
+
+	/** Height of the object. If not specified it will try to determine automatically (Auto detection is iffy due to the complexity of css rendering) */
 	top: PropTypes.number,
+
+	/** whether or not the object is fixed static or not. Setting this true would making the object fixed in its initial left and top */
+	fixed: PropTypes.bool,
+
+	/** density of the object. This combined with height and width determine the mass of the object. Higher this value heavier the object is */
 	density: PropTypes.number,
+
+	/** Friction for object in physics simuation. lesser the value, more slippery the object would be */
 	friction: PropTypes.number,
+
+	/** Bounciness or elasticity of the object.its should be between 0 to 1. Higher the value more the object bounce with other objects */
 	restitution: PropTypes.number,
+
+	/** This is a special flag , that set true for very fast(really really) moving objects. Set this to true . But More objects with this flag true would cause performance issues. Rule of thumb. If you notice some objects pass through other objects when moving fast, set this to true */
 	bullet: PropTypes.bool,
+
+	/** callback on begin colliding with other objects */
 	onBeginContact: PropTypes.func,
+
+	/** callback on end of colliding. This may not happen always */
 	onEndContact: PropTypes.func,
+
+	/** shape to simulate */
 	shape: PropTypes.oneOf(['circle','box']),
+
+	/** in form of [x,y] . Setting this would apply this force after creating the body */
 	initialForce: TWO_NUMBERS_OPTIONAL,
+
+	/** 
+		in form of [x,y] . Same as force . But it aplies impulse instead of force.
+	 */
 	initialImpulse: TWO_NUMBERS_OPTIONAL,
+
+	/**
+		A string tag to identify the kind of object. This would be primarily used to identify the objects after collision
+	*/
 	category: PropTypes.string,
 };
 

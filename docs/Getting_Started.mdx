@@ -1,17 +1,20 @@
 ---
 name: Getting Started
+route: /docs/
 ---
-import { PropsTable } from 'docz'
+import { PropsTable,Link } from 'docz';
 import {World,Item} from '../src/index';
-import TodoApp from './Todo';
-
-## try it
-
-<TodoApp />
 
 ## Introduction
 
 Simulate the dom elements with box2d physics
+
+## live demos
+see these examples for usage
+
+https://q8l48rwk49.codesandbox.io/
+
+https://1466m84mxl.codesandbox.io/
 
 ## Getting Started
 
@@ -21,3 +24,15 @@ Simulate the dom elements with box2d physics
 	npm i react-dom-box2d --save 
 ```
 
+## Components
+This library has only two components
+	
+
+<Link to="/World/">World</Link>
+<br />
+<Link to="/Item/">Item</Link>
+
+
+## world component
+	
+This component determines the aspects of the physics in your simulation

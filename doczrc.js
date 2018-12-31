@@ -1,4 +1,5 @@
 export default {
+  base:'/react-dom-box2d/',
   htmlContext: {
     head: {
       links: [{
@@ -10,5 +11,5 @@ export default {
   },
   themeConfig: {
     codemirrorTheme: 'dracula'
-  }
+  },
 }
