@@ -1,5 +1,6 @@
 export default {
   base:'/react-dom-box2d/',
+  hashRouter: true,
   htmlContext: {
     head: {
       links: [{

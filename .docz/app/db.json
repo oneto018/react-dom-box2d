@@ -4,7 +4,7 @@
     "description": "Box2d physics engine and React DOM integrated ",
     "menu": [],
     "ordering": "descending",
-    "version": "0.1.0-alpha.2",
+    "version": "0.1.0-alpha.3",
     "repository": "https://github.com/oneto018/react-dom-box2d",
     "native": false,
     "codeSandbox": true,
@@ -12,6 +12,7 @@
       "codemirrorTheme": "dracula"
     },
     "base": "/react-dom-box2d/",
+    "hashRouter": true,
     "htmlContext": {
       "head": {
         "links": [
