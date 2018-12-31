@@ -6,7 +6,7 @@ Box2d Physics Engine integrated with react-dom
 
 ### documentation
 
-[Documentation](https://oneto018.github.io/react-dom-box2d/docs/)
+[Documentation](https://oneto018.github.io/react-dom-box2d/#/docs/)
 
 ## Demos
 
