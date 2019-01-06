@@ -3,7 +3,10 @@ Use 2d Physics Simulation for your react-dom elements.
 Box2d Physics Engine integrated with react-dom
 
 
-
+### Install
+```
+npm i react-dom-box2d
+```
 ### documentation
 
 [Documentation](https://oneto018.github.io/react-dom-box2d/#/docs/)
