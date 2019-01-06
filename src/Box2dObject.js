@@ -11,6 +11,8 @@ class Box2dObject extends Component{
 		if(!props.worldRef){
 			throw new Error('worldRef prop is missing. Please use world consumer to acquire the worldRef or put the Item component direct child of the World');
 		}
+		this.width = null;
+		this.height = null;
 	}
 	static _internalType="Box2dObject";
 	
@@ -61,7 +63,8 @@ class Box2dObject extends Component{
 			domLeft = ('left' in this.props)?left: this.el.offsetLeft,
 			domTop = ('top' in this.props )?top:this.el.offsetTop;
 		
-	
+		this.width = domWidth;
+		this.height = domHeight;
 					// (left,top,width,height) 
 		let {x,y} = fromDomToCanvas(domLeft,domTop,domWidth,domHeight);
 		

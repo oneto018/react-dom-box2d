@@ -113,8 +113,10 @@ class Box2dWorld extends Component{
 	    			let {x,y} = b.GetPosition();
 	    			let angle = b.GetAngle();
 	    			//sidestepping whole React and applying css transforms directly to the dom nodes directly (seems simpler this way , hopefully more performant)
-	    			//(dom,x,y,rotation,SCALE)
-	    			setDomPosition(userData.dom,x,y,angle,this.SCALE);
+	    			//(dom,width,height,x,y,rotation,SCALE)
+	    			if(userData.rc){
+	    				setDomPosition(userData.dom,userData.rc.width,userData.rc.height,x,y,angle,this.SCALE);
+	    			}		
 	    		}
 	    	}
 

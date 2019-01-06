@@ -1,6 +1,6 @@
 {
   "name": "react-dom-box2d",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.4",
   "description": "Box2d physics engine and React DOM integrated ",
   "main": "build/index.js",
   "scripts": {

@@ -22,23 +22,19 @@ const fromDomToCanvas = (left,top,width,height) =>{
 };
 
 
-//trying my best to support every browser I can with vendor prefixes
-const setVendorPrefixedTransform = (element, value)=> {
-  element.style["webkitTransform"] = value;
-  element.style["mozTransform"] = value;
-  element.style["msTransform"] = value;
-  element.style["oTransform"] = value;
-  element.style.transform = value;
+
+const setTransform = (element, value)=> {
+  	element.style.transform = value; 
 }
 
-const setDomPosition = (dom,x,y,rotation,SCALE) => {
+const setDomPosition = (dom,width,height,x,y,rotation,SCALE) => {
 	//console.log('got SCALE',SCALE,{x,y,rotation});
-	let {left,top }= fromCanvasToDom(fromPhysicsToCanvas(x,SCALE),fromPhysicsToCanvas(y,SCALE),dom.offsetWidth,dom.offsetHeight);
+	let {left,top }= fromCanvasToDom(fromPhysicsToCanvas(x,SCALE),fromPhysicsToCanvas(y,SCALE),width,height);
 	//console.log('converted',{left,top,ow:dom.offsetWidth,oh:dom.offsetHeight});
 	let transformString = `translate(${left}px,${top}px) rotate(${rotation}rad)`;
 	//dom.style.transform = transformString;
 	//console.log('dom transforming');
-	setVendorPrefixedTransform(dom,transformString);
+	setTransform(dom,transformString);
 };
 
 //without this , beginners (and almost everybody) will go mad
