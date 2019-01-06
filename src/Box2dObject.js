@@ -75,7 +75,7 @@ class Box2dObject extends Component{
 		
 		if(shape==='box'){
 			const rects = this.el.getClientRects();
-			console.log('rects',rects);
+			
 			if(rects.length>1){
 				console.log('inline element detected',rects);
 				//this is an inline element
