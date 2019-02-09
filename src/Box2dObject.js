@@ -54,7 +54,7 @@ class Box2dObject extends Component{
 		
 		
 		//had to be done to get browser realize width/height in position:relative
-		this.el.style.overflow='auto';
+		this.el.style.overflow='visible';
 		//FIXME: Check browser compatibility of these methods.(I don't want to use jquery 😠 ). 
 		let domWidth = (width)?width: this.el.offsetWidth,
 			domHeight =(height)?height: this.el.offsetHeight,
