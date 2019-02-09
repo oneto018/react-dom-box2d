@@ -2,15 +2,12 @@ import React,{Component,Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {b2Vec2,b2BodyDef,b2FixtureDef,b2Body,b2PolygonShape,b2CircleShape,b2BodyType} from  "@flyover/box2d";
 import {fromPhysicsToCanvas,fromCanvasToPhysics,fromCanvasToDom,fromDomToCanvas,setDomPosition,makeEnclosedBox,delay,TWO_NUMBERS_OPTIONAL} from './Utils';
-
+import {Context} from './Box2dWorld';
 
 class Box2dObject extends Component{
 	constructor(props){
 		super(props);
 		this.state = {physicsInited:false,domWidth:null,domHeight:null,circleRadius:null};
-		if(!props.worldRef){
-			throw new Error('worldRef prop is missing. Please use world consumer to acquire the worldRef or put the Item component direct child of the World');
-		}
 		this.width = null;
 		this.height = null;
 	}
@@ -18,12 +15,13 @@ class Box2dObject extends Component{
 	
 	//I am not sure in which browsers this works
 	createFixturesForInline = (fixDef,body,rects) => {
+		const worldRef = this.context;
 		//const rects = this.el.getClientRects();
 		const boundingRect = this.el.getBoundingClientRect();
 		
 		const centerX = this.el.offsetWidth/2;
 		const centerY = boundingRect.height/2;
-		const SCALE = this.props.worldRef.SCALE;
+		const SCALE = worldRef.SCALE;
 		//if for some reason a fixture of size 0 created whole simulation screws up and not working 
 		const filteredRects = Array.from(rects).filter(x => ((x.width>0)&&(x.height>0)));
 		const leftOffset = boundingRect.left;
@@ -42,8 +40,8 @@ class Box2dObject extends Component{
 
 	//FIXME: this method is getting big
 	physicsInit = async () => {
-		const {fixed=false,restitution=0.1,friction=0.5,density=1,shape='box',category=null,worldRef,data,width,height,left,top,initialForce,initialImpulse,bullet}=this.props;
-
+		const {fixed=false,restitution=0.1,friction=0.5,density=1,shape='box',category=null,data,width,height,left,top,initialForce,initialImpulse,bullet}=this.props;
+		const worldRef = this.context;
 		const bodyDef = new b2BodyDef;
 		bodyDef.type = (fixed)? b2BodyType.b2_staticBody:b2BodyType.b2_dynamicBody;
 		
@@ -202,5 +200,8 @@ Box2dObject.propTypes = {
 	initialImpulse: TWO_NUMBERS_OPTIONAL,
 	category: PropTypes.string,
 };
+
+Box2dObject.contextType = Context;
+
 
 export default Box2dObject;

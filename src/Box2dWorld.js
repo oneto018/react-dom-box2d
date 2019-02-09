@@ -5,8 +5,8 @@ import {fromPhysicsToCanvas,fromCanvasToPhysics,fromCanvasToDom,fromDomToCanvas,
 import {getApproxImpactFromContact,getBodyBCategory,getBodyACategory} from './ContactUtils';
 
 
-const {Provider,Consumer} = React.createContext();
-
+const Context = React.createContext();
+const {Provider,Consumer} = Context;
 
 
 class Box2dWorld extends Component{
@@ -158,16 +158,6 @@ class Box2dWorld extends Component{
 	    }
 	}
 
-	getChildrenMapped = () => {
-		return React.Children.map(this.props.children,(child)=>{
-			if(child.type._internalType==='Box2dObject'){
-				return React.cloneElement(child,{worldRef:this});
-			} else {
-				return child;
-			}
-		});
-	}
-
 	render() {
 		let {className='Box2dWorld',children} = this.props;
 		
@@ -175,7 +165,7 @@ class Box2dWorld extends Component{
 
 			<div className={className} {...this.restProps} style={this.worldStyle}>
 				<Provider value={this}>
-					{this.getChildrenMapped()}
+					{children}
 				</Provider>
 			</div>
 		);
@@ -196,6 +186,6 @@ Box2dWorld.propTypes = {
 	enclosureThickness: PropTypes.number
 };
 
-export {Consumer};
+export {Context};
 
 export default Box2dWorld;
