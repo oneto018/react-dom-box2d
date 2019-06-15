@@ -1,6 +1,6 @@
 {
   "name": "react-dom-box2d",
-  "version": "0.2.0-alpha.2",
+  "version": "0.4.0-alpha.1",
   "description": "Box2d physics engine and React DOM integrated ",
   "main": "build/index.js",
   "scripts": {
@@ -19,13 +19,13 @@
   "author": "Nagarajan N <oneto018@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.4.0",
+    "react": "^16.8.0",
     "webpack": "^4.28.3",
     "@flyover/box2d": "github:flyover/box2d.ts#99a83dd78fc7bd6d56893a3605e838dbe44c543e"
   },
   "peerDependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -39,17 +39,16 @@
     "docz-theme-bone": "^0.11.3",
     "docz-theme-default": "^0.13.7",
     "webpack-cli": "^3.1.2",
-    "react": "16.7.0-alpha.2",
-    "react-dom": "16.7.0-alpha.2"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/oneto018/react-dom-box2d"
+    "type": "git",
+    "url": "https://github.com/oneto018/react-dom-box2d"
   },
   "homepage": "https://github.com/oneto018/react-dom-box2d",
-  "bugs":{ 
-    "url" : "https://github.com/oneto018/react-dom-box2d/issues",
-    "email" : "oneto018@gmail.com"
+  "bugs": {
+    "url": "https://github.com/oneto018/react-dom-box2d/issues",
+    "email": "oneto018@gmail.com"
   }
-
 }
