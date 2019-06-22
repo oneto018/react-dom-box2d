@@ -62,7 +62,7 @@ class Box2dObject extends Component {
 	}
 
 	//FIXME: this method is getting big
-	physicsInit = async () => {
+	physicsInit =  () => {
 		const { fixed = false, restitution = 0.1, friction = 0.5, density = 1, shape = 'box', category = null, data, width, height, left, top, initialForce, initialImpulse, bullet } = this.props;
 		const worldRef = this.context;
 		const bodyDef = new b2BodyDef;
