@@ -28,7 +28,14 @@ source for the demo
 ### Force Demo
 
 https://q8l48rwk49.codesandbox.io/
+
 [![Edit react-dom-box2d force demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/q8l48rwk49)
+
+### Collision detection demo
+https://wsknn.codesandbox.io/
+
+[![Edit react-dom-box2d force demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-dom-box2d-force-demo-wsknn)
+
 
 ## Rationale
 
